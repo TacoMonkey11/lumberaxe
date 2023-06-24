@@ -1,0 +1,10 @@
+{
+  "id": "gold_lumberaxe",
+  "miningLevel": 0,
+  "durability": 32,
+  "miningSpeedMultiplier": 6,
+  "attackDamage": 2,
+  "attackSpeed": -3.0,
+  "enchantability": 14,
+  "repairIngredient": "minecraft:gold_ingot"
+}

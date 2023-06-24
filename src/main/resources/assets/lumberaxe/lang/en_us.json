@@ -1,0 +1,12 @@
+{
+  "item.lumberaxe.iron_lumberaxe": "Iron Lumberaxe",
+  "item.lumberaxe.gold_lumberaxe": "Gold Lumberaxe",
+  "item.lumberaxe.diamond_lumberaxe": "Diamond Lumberaxe",
+  "item.lumberaxe.netherite_lumberaxe": "Netherite Lumberaxe",
+  "itemGroup.lumberaxe.group": "Lumberaxe",
+
+  "text.config.lumberaxe-config.title": "Lumberaxe Config",
+  "text.config.lumberaxe-config.option.maxBroken": "Maximum block broken",
+  "text.config.lumberaxe-config.option.durabilityMultiplier": "Lumberaxe durability multiplier",
+  "text.config.lumberaxe-config.option.durabilityMultiplier.tooltip": "Axe durability is doubled by default. Set to 1 to make it the same as vanilla axe."
+}

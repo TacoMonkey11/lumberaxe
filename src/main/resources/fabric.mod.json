@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "lumberaxe",
+  "version": "${version}",
+  "name": "Lumberaxe",
+  "description": "Adds a new type of axe which can veinmine logs.",
+  "authors": [
+    "TacoMonkey",
+    "Deadeye Dutch"
+  ],
+  "contact": {
+    "website": "https://github.com/TacoMonkey/lumberaxe",
+    "repo": "https://github.com/TacoMonkey/lumberaxe"
+  },
+  "license": "MIT",
+  "icon": "assets/lumberaxe/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.github.tacomonkey11.lumberaxe.Lumberaxe"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

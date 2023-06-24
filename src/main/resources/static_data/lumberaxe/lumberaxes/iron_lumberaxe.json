@@ -1,0 +1,10 @@
+{
+  "id": "iron_lumberaxe",
+  "miningLevel": 2,
+  "durability": 250,
+  "miningSpeedMultiplier": 3,
+  "attackDamage": 0,
+  "attackSpeed": -3.1,
+  "enchantability": 22,
+  "repairIngredient": "minecraft:iron_ingot"
+}

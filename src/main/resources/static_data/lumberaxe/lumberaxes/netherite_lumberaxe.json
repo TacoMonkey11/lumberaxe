@@ -1,0 +1,10 @@
+{
+  "id": "netherite_lumberaxe",
+  "miningLevel": 4,
+  "durability": 2031,
+  "miningSpeedMultiplier": 4.5,
+  "attackDamage": 4,
+  "attackSpeed": -3.0,
+  "enchantability": 15,
+  "repairIngredient": "minecraft:netherite_ingot"
+}
