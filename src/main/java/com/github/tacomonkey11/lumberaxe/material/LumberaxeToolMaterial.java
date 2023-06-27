@@ -4,8 +4,8 @@ import com.github.tacomonkey11.lumberaxe.Lumberaxe;
 import com.github.tacomonkey11.lumberaxe.data.LumberaxeData;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public class LumberaxeToolMaterial implements ToolMaterial {
 
@@ -32,7 +32,7 @@ public class LumberaxeToolMaterial implements ToolMaterial {
                                 (data.getDurability() == 0 ? 500 : data.getDurability()) * Lumberaxe.CONFIG.durabilityMultiplier(),
                                 data.getAttackDamage() == 0 ? 4 : data.getAttackDamage(),
                                 data.getMiningLevel(),
-                                Ingredient.ofItems(Registry.ITEM.get(data.getRepairIngredient() == null ? new Identifier("iron_ingot") : data.getRepairIngredient()))
+                                Ingredient.ofItems(Registries.ITEM.get(data.getRepairIngredient() == null ? new Identifier("iron_ingot") : data.getRepairIngredient()))
                 );
         }
 

@@ -4,12 +4,20 @@ import com.github.tacomonkey11.lumberaxe.Lumberaxe;
 import com.github.tacomonkey11.lumberaxe.item.LumberaxeItem;
 import com.github.tacomonkey11.lumberaxe.material.LumberaxeToolMaterial;
 import draylar.staticcontent.api.ContentData;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemGroups;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public class LumberaxeData implements ContentData {
+
+        public static final ItemGroup GROUP = FabricItemGroup.builder(new Identifier("lumberaxe", "group")).displayName(Text.translatable("itemGroup.lumberaxe.group")).icon(() -> Registries.ITEM.get(new Identifier("lumberaxe", "iron_lumberaxe")).getDefaultStack()).build();
 
         private final String id;
         private final int miningLevel;
@@ -37,19 +45,21 @@ public class LumberaxeData implements ContentData {
 
         @Override
         public void register(Identifier fileID) {
-                Item.Settings settings = new Item.Settings().group(Lumberaxe.GROUP);
+                Item.Settings settings = new Item.Settings();
                 if (isFireImmune()) {
                         settings.fireproof();
                 }
 
                 LumberaxeItem item = new LumberaxeItem(LumberaxeToolMaterial.from(this), getAttackDamage(), getAttackSpeed(), settings);
 
+                ItemGroupEvents.modifyEntriesEvent(GROUP).register(entries -> entries.add(item));
+
                 if (getBurnTime() > 0) {
                         FuelRegistry.INSTANCE.add(item, getBurnTime());
                 }
 
                 Registry.register(
-                                Registry.ITEM,
+                                Registries.ITEM,
                                 new Identifier("lumberaxe", id),
                                 item
                                 );
