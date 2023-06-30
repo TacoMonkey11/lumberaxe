@@ -7,5 +7,5 @@ import io.wispforest.owo.config.annotation.Modmenu;
 @Modmenu(modId = "lumberaxe")
 public class LumberaxeConfigModel {
         public int maxBroken = 100;
-        public int durabilityMultiplier = 2;
+        public double durabilityMultiplier = 3.5;
 }

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "lumberaxe:iron_lumberaxe",
+    "lumberaxe:gold_lumberaxe",
+    "lumberaxe:diamond_lumberaxe",
+    "lumberaxe:netherite_lumberaxe"
+  ]
+}
