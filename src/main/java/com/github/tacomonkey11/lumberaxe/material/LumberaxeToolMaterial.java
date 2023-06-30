@@ -29,7 +29,7 @@ public class LumberaxeToolMaterial implements ToolMaterial {
                 return new LumberaxeToolMaterial(
                                 data.getEnchantability() == 0 ? 15 : data.getEnchantability(),
                                 data.getMiningSpeedMultiplier() == 0 ? 1 : data.getMiningSpeedMultiplier(),
-                                (data.getDurability() == 0 ? 500 : data.getDurability()) * Lumberaxe.CONFIG.durabilityMultiplier(),
+                                (int) Math.floor((data.getDurability() == 0 ? 500 : data.getDurability()) * Lumberaxe.CONFIG.durabilityMultiplier()),
                                 data.getAttackDamage() == 0 ? 4 : data.getAttackDamage(),
                                 data.getMiningLevel(),
                                 Ingredient.ofItems(Registries.ITEM.get(data.getRepairIngredient() == null ? new Identifier("iron_ingot") : data.getRepairIngredient()))
