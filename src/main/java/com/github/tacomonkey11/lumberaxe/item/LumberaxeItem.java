@@ -9,6 +9,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.tag.BlockTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -35,7 +36,7 @@ public class LumberaxeItem extends AxeItem {
         public void mineTree(BlockPos pos, World world, ItemStack stack, LivingEntity miner, IntegerHolder holder){
                 if (holder.value >= Lumberaxe.CONFIG.maxBroken()) return;
 
-                if (world.getBlockState(pos).getMaterial().equals(Material.WOOD)) {
+                if (world.getBlockState(pos).isIn(BlockTags.LOGS)) {
                         world.breakBlock(pos, true, miner);
                         stack.damage(1, miner, (e) -> e.sendToolBreakStatus(miner.getActiveHand()));
                         if (miner instanceof PlayerEntity) {
@@ -45,7 +46,7 @@ public class LumberaxeItem extends AxeItem {
                 }
 
                 for (BlockPos blockPos : BlockPos.iterateOutwards(pos, 1, 1, 1)) {
-                        if (world.getBlockState(blockPos).getMaterial().equals(Material.WOOD)) {
+                        if (world.getBlockState(blockPos).isIn(BlockTags.LOGS)) {
                                 mineTree(blockPos, world, stack, miner, holder);
                         }
                 }
