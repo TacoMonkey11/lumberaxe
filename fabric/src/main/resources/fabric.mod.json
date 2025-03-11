@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "lumberaxe",
+  "version": "${version}",
+  "name": "Lumberaxe",
+  "description": "Adds a new tool that works like veinminer, but just for logs.",
+  "authors": [
+    "TacoMonkey"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/lumberaxe",
+    "sources": "https://github.com/TacoMonkey11/lumberaxe"
+  },
+  "license": "LGPL-3.0",
+  "icon": "assets/lumberaxe/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.github.tacomonkey11.fabric.LumberaxeFabric"
+    ]
+  },
+  "mixins": [
+    "lumberaxe.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "minecraft": "~1.21.4",
+    "java": ">=21",
+    "architectury": ">=15.0.1",
+    "fabric-api": "*"
+  }
+}
