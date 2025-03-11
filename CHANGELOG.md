@@ -1,5 +1,0 @@
-- Port to 1.21.4
-- Convert project to architectury
-- Remove all config options
-  - I didn't have the energy to add them back after rewriting everything. If there is a specific thing that requires configuration, please let me know so I can add them back.
-- Rewrite tree felling logic, adding nice "animation".
