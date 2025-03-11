@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "a": "minecraft:gold_ingot",
+    "b": "minecraft:stick",
+    "c": "minecraft:gold_block"
+  },
+  "pattern": [
+    "ac ",
+    "ab ",
+    " b "
+  ],
+  "result": {
+    "count": 1,
+    "id": "lumberaxe:gold_lumberaxe"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "a": "minecraft:iron_ingot",
+    "b": "minecraft:stick",
+    "c": "minecraft:iron_block"
+  },
+  "pattern": [
+    "ac ",
+    "ab ",
+    " b "
+  ],
+  "result": {
+    "count": 1,
+    "id": "lumberaxe:iron_lumberaxe"
+  }
+}
